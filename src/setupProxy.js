@@ -7,6 +7,13 @@ module.exports  = function (app) {
             "^/m":""
         }
     }))
+    app.use("/p",proxy({
+        target:"http://127.0.0.1:8080",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/p":""
+        }
+    }))
     // app.get("/lala",function (req,res) {
     //     res.json({
     //         ok:2,
