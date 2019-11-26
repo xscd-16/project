@@ -1,0 +1,44 @@
+{
+  "id": "1529103",
+  "name": "聚橙",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "67426",
+      "name": "主页",
+      "font_class": "iconfont13",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "5046597",
+      "name": "橙子-线性-2",
+      "font_class": "chengzi-danse-",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "7812522",
+      "name": "我 的",
+      "font_class": "home_my",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9241832",
+      "name": "票夹_28 (2)",
+      "font_class": "piaojia_",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "11453475",
+      "name": "影院",
+      "font_class": "yingyuan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}
