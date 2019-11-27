@@ -16,20 +16,12 @@ export default class Login extends React.Component{
             </div>
         )
     }
-  async  getCheck(){
+    getCheck(){
         if(/^1[3456789]\d{9}$/.test(this.refs.phone.value)){
             console.log(this.refs.phone.value)
-            const phoneId=this.refs.phone.value;
-         const {data}=await   this.$axios.get("/p/logo",{
-                params:{
-                    phoneId
-                }
-            })
-            console.log(data)
         }else{
-            alert("请输入正确的手机号码")
+            alert("11")
         }
         
     }
-    com
 }
