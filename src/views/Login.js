@@ -22,6 +22,5 @@ export default class Login extends React.Component{
         }else{
             alert("11")
         }
-        
     }
 }

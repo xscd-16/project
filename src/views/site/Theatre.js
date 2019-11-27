@@ -1,5 +1,4 @@
 import React from 'react';
-import TabBar from "../../components/TabBar";
 export default class Theatre extends React.Component{
     render() {
         return (

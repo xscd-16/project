@@ -1,11 +1,11 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  position: relative;
 }
-
 .App-logo {
   height: 40vmin;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,7 +16,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 a{
   text-decoration: none;
 }
@@ -24,13 +23,15 @@ a{
 
 /* 底部导航TabBar */
 footer{
+  width:100%;
+  box-sizing: border-box;
   height:3rem;
   display: flex;
   justify-content: space-around;
   background: #fbfbfb;
   position: fixed;
   bottom:0;
-  width:100%;
+  overflow: hidden;
 }
 .App-link {
   color: #555;
@@ -57,3 +58,85 @@ footer{
   font-size:1.6rem;
   font-weight:bold;
 }
+
+
+  
+
+
+/* 为你推荐Recommend */
+.Recommend{
+  padding: 0 0.8rem;
+  background: #fbfbfb;
+}
+.Recommend h3 {
+ text-align: left;
+ font-size:1.2rem;
+ height:3rem;
+ line-height:3rem;
+}
+.Recommend .recommendItem {
+  height:10rem;
+  background: #fff;
+  margin-bottom:1rem;
+  display: flex;
+  align-items: center;
+}
+.Recommend .recommendItem img{
+  height:9rem;
+  width:6.6rem;
+}
+.Recommend .recommendItem .item-info {
+  height:9rem;
+  padding-left:.8rem;
+  text-align: left;
+  width:100%;
+}
+
+
+
+
+
+/* 演出详情 */
+.PerformanceDetail .header{
+  width:100%;
+  height:14rem;
+  margin:0;
+  padding:0;
+  /* filter: blur(10px); */
+  background-size: 100%;
+  position: relative;
+}
+.PerformanceDetail .header .head{
+  width:100%;
+  display: block;
+  height:3rem;
+  position: absolute;
+  top:0;
+  left:0;
+  background: #ccc;
+}
+.PerformanceDetail .header .head span{
+  position: absolute;
+  color:#fff;
+}
+.PerformanceDetail .header .head .icon-fanhui{
+ left:1rem;
+ top:.6rem;
+ font-size:1.4rem;
+}
+.PerformanceDetail .header .head .titleCon{
+  font-size:1.2rem;
+  font-weight:bold;
+  left:10rem;
+  top:.5rem;
+ }
+ .PerformanceDetail .header .head .icon-fenxiang{
+   font-size:1.4rem;
+  right:4rem;
+  top:.7rem;
+ }
+ .PerformanceDetail .header .head .icon-zhuye{
+  font-size:1.6rem;
+  right:1rem;
+  top:.5rem;
+ }

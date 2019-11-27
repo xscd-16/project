@@ -1,36 +1,36 @@
 import React from 'react';
-import {connect} from "react-redux";
-import TabBar from "../../components/TabBar";
+import Recommend from '../../components/Recommend';
+import { connect } from "react-redux";
 import homeAction from "../../store/actionCreator/home/index"
- class Home extends React.Component{
-    render() {
-        return (
-            <div>
-            {
-                this.props.num.map((v,i)=>(
-                    <div key={i}>
-                      {v.show_name}
-                    </div>
-                ))
-            }
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+        {/* {
+          this.props.num.map((v, i) => (
+            <div key={i}>
+              {v.show_name}
             </div>
-        )
-    }
-    componentDidMount(){
-        this.props.getList.call(this)
-    }
+          ))
+        } */}
+        <Recommend></Recommend>
+      </div>
+    )
+  }
+  componentDidMount() {
+    this.props.getList.call(this);
+  }
 }
-function mapStateToProps(state){
-    return {
-      num:state.home.num
+function mapStateToProps(state) {
+  return {
+    num: state.home.num
+  }
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    getList() {
+      dispatch(homeAction.getList.call(this))
     }
   }
-  function mapDispatchToProps(dispatch){
-    return {
-        getList(){
-            dispatch(homeAction.getList.call(this))
-            
-        }
-    }
-  }
-export default connect(mapStateToProps,mapDispatchToProps)(Home)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

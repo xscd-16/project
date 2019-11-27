@@ -13,11 +13,46 @@
       "unicode_decimal": 58892
     },
     {
+      "icon_id": "1243236",
+      "name": "省略号",
+      "font_class": "shenglvehao",
+      "unicode": "e796",
+      "unicode_decimal": 59286
+    },
+    {
+      "icon_id": "1780622",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "2992751",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "3095514",
+      "name": "3.0-分享",
+      "font_class": "fenxiang",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
       "icon_id": "5046597",
       "name": "橙子-线性-2",
       "font_class": "chengzi-danse-",
       "unicode": "e62c",
       "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "5230872",
+      "name": "dingwei",
+      "font_class": "dingwei",
+      "unicode": "e610",
+      "unicode_decimal": 58896
     },
     {
       "icon_id": "7812522",
@@ -32,6 +67,27 @@
       "font_class": "piaojia_",
       "unicode": "e617",
       "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "9557782",
+      "name": "右箭头",
+      "font_class": "icon1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "9928923",
+      "name": "返 回",
+      "font_class": "fanhui",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "9984534",
+      "name": "分 享",
+      "font_class": "fenxiang1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
     },
     {
       "icon_id": "11453475",

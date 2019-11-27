@@ -1,3 +1,9 @@
 export default{
-    num:[]
+    num: [],
+    recommendList: [],
+    performanceDetail: {
+        static_data: {
+            pic: ""
+        }
+    }
 }

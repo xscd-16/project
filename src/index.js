@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import store from "./store/index";
 import './index.css';
 import './assets/iconfont/iconfont.css';
+import "../node_modules/react-pullload/dist/ReactPullLoad.css";
+// import 'antd-mobile/dist/antd-mobile.css';
 import App from './App';
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 import * as serviceWorker from './serviceWorker';
-
-React.Component.prototype.$axios=axios;
+axios.interceptors.response.use(({ data }) => data);
+React.Component.prototype.$axios = axios;
 ReactDOM.render((
     <Router>
         <Provider store={store}>
