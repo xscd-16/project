@@ -1,0 +1,19 @@
+.nav1 ul{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.nav1 ul li{
+    list-style:none;
+    width:20%;
+    padding-left:0
+}
+.nav1 ul li img{
+    width:51px;
+    height:51px;
+    margin: 0 auto;
+}
+.nav1 ul li p{
+    text-align: center;
+}
