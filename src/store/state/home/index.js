@@ -1,3 +1,6 @@
 export default{
-    num:[]
+    num:[],
+    //演唱会
+    floorShowList:[],
+    floorShowContent:{}
 }

@@ -2,12 +2,17 @@ import React from 'react';
 import {connect} from "react-redux";
 import TabBar from "../../components/TabBar";
 import homeAction from "../../store/actionCreator/home/index"
+<<<<<<< HEAD
 import CarouselList from "../../components/CarouselList"
 import Nav from "../../components/Nav"
+=======
+import ZJAhome from "../../components/ZJAhome"
+>>>>>>> 5e75ec80bcaa94b12a228b989b6573f9b723a9b7
  class Home extends React.Component{
     render() {
         return (
             <div>
+<<<<<<< HEAD
             <CarouselList></CarouselList>
             <Nav></Nav>
             {
@@ -17,11 +22,15 @@ import Nav from "../../components/Nav"
                 //     </div>
                 // ))
             }
+=======
+               <ZJAhome></ZJAhome>
+>>>>>>> 5e75ec80bcaa94b12a228b989b6573f9b723a9b7
             </div>
         )
     }
     componentDidMount(){
         this.props.getList.call(this)
+
     }
 }
 function mapStateToProps(state){
@@ -32,9 +41,9 @@ function mapStateToProps(state){
   function mapDispatchToProps(dispatch){
     return {
         getList(){
-            dispatch(homeAction.getList.call(this))
-            
+            dispatch(homeAction.getList.call(this))            
         }
+
     }
   }
 export default connect(mapStateToProps,mapDispatchToProps)(Home)
