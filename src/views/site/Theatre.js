@@ -1,7 +1,6 @@
 import TabBar from "../../components/TabBar";
 import React from "react";
 import '../../Theatre.css';
-import axios from "axios";
 import {
     connect
 } from "react-redux";
@@ -12,15 +11,15 @@ import theatreCreator from "../../store/actionCreator/theatre"
 class Theatre extends React.Component{
     render(){
         return (
-            <>
-            <h3>剧院</h3>
+            <div id="all">
+            <h3 className="bold">剧院</h3>
             <div className="main">
                 {
                     this.props.theatreList.map((v)=>(
                         <div className="content" key={v.id}>
                         <div className="top">
                             <a className="left"  href={v.show_list_url}>
-                                <img src={v.pic} alt="true"/>  
+                                <img src={v.pic} alt="加载中"/>  
                                 <div className="con">
                                     <h3>{v.name}</h3>
                                     <p>{v.count}场在售演出</p>
@@ -36,13 +35,13 @@ class Theatre extends React.Component{
                                             <p>{v.show_time}</p>
                                             <span></span>
                                         </div>
-                                        <a>
-                                            <img src={v.pic} alt="true"/>
+                                        <a href={v.show_list_url}>
+                                            <img src={v.pic} alt="加载中"/>
                                         </a>
                                     </div>
                                 </div>
                             ))}
-                            <div className="showList more">
+                            {/* <div className="showList more">
                                 <div className="date">
                                     <p></p>
                                     <span></span>
@@ -50,13 +49,13 @@ class Theatre extends React.Component{
                                 <a>
                                     <p>加载更多</p>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     ))
                 }
             </div>
-            </>
+            </div>
         )
     }
     componentDidMount(){

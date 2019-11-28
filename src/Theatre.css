@@ -1,7 +1,9 @@
-/* .App {
-    text-align: center;
-  } */
-  .main{
+#all .bold{
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+#all  .main{
     padding:0 2rem;
     height: 100%;
     padding-top: .32rem;
