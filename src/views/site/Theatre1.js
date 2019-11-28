@@ -12,29 +12,26 @@ import TabBar from "../../components/TabBar";
 import React from "react";
 import '../../Theatre.css';
 import axios from "axios";
-import {
-    connect
-} from "react-redux";
-import {
-    bindActionCreators
-} from "redux";
-import theatreCreator from "../../store/actionCreator/theatre"
+// import {
+//     connect
+// } from "react-redux";
 class Theatre extends React.Component{
-    // constructor(){
-    //     super();
-    //     this.state={
-    //         theatreList:[],
-    //         pageNo:0,
-    //         pageSize:15
-    //     }
-    // }
+    constructor(){
+        super();
+        this.state={
+            theatreList:[],
+            pageNo:0,
+            pageSize:15
+        }
+    }
     render(){
         return (
             <>
             <h3>剧院</h3>
             <div className="main">
+                
                 {
-                    this.props.theatreList.map((v)=>(
+                    this.state.theatreList.map((v)=>(
                         <div className="content" key={v.id}>
                         <div className="top">
                             <a className="left"  href={v.show_list_url}>
@@ -78,51 +75,14 @@ class Theatre extends React.Component{
         )
     }
     componentDidMount(){
-        this.props.getTheatreList()
+        this.getTheatreList()
     }
-    // async getTheatreList(){
-    //     const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
-    //     console.log(data.data.theatre_list)
-    //     this.setState({
-    //         theatreList:data.data.theatre_list
-    //     })
-    // }
-}
-function mapStateToProps(state,props){
-    return {
-        theatreList:state.theatre.theatreList
+    async getTheatreList(){
+        const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
+        console.log(data.data.theatre_list)
+        this.setState({
+            theatreList:data.data.theatre_list
+        })
     }
 }
-// function mapDispathcToProps(dispatch){
-//     return bindActionCreators(theatreCreator,dispatch);
-
-//     // return {
-//     //     // 异步dispatch
-//     //     getTheatreList(){
-//     //         dispatch(theatreCreator.getTheatreList.call(this))
-//     //         // dispatch(async (dispatch)=>{
-//     //         //     const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
-//     //         //     console.log(data.data.theatre_list)
-//     //         //     dispatch({
-//     //         //         type:"UP_THERTRE",
-//     //         //         payload:{
-//     //         //             theatreList:data.data.theatre_list
-//     //         //         }
-//     //         //     })
-//     //         // })
-//     //     }
-        
-//     //     // 同步dispathc
-//     //     // async getTheatreList(){
-//     //     //     const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
-//     //     //     console.log(data.data.theatre_list)
-//     //     //     dispatch({
-//     //     //         type:"UP_THERTRE",
-//     //     //         payload:{
-//     //     //             theatreList:data.data.theatre_list
-//     //     //         }
-//     //     //     })
-//     //     // }
-//     // }
-// }
-export default connect(mapStateToProps,(dispatch)=>bindActionCreators(theatreCreator,dispatch))(Theatre);
+export default Theatre;
