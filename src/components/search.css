@@ -1,0 +1,39 @@
+
+
+.head{
+    height:44px;
+    /* background: orangered; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color:#666;
+    padding:0 15px;
+}
+.head-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:277px;
+    height:28px;
+    padding: 0 14px 0 8px;
+    border: 1px solid #ebebeb;
+    background-color: #f5f5f5;
+    border-radius: 17px;
+}
+.head-div input{
+    font-size: 13px;
+    width:235px;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.section{
+    text-align:left;
+    padding: 26px 15px 0;
+    font-size: 13px;
+}
+.section-div{
+    padding-top:20px;
+}
