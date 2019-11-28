@@ -35,7 +35,7 @@ class Nav extends React.Component{
             this.setState({
                 navList:this.navList
             })
-            console.log(data.data.classify_list)
+            // console.log(data.data.classify_list)
         })
     }
 }

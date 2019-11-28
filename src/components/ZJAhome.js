@@ -59,7 +59,7 @@ import "../zja-App.css"
     }
 }
 function mapStateToProps(state){
-  console.log(333333333,state.home)
+  // console.log(333333333,state.home)
     return {
       num:state.home.num,
       floorShowList:state.home.floorShowList,
