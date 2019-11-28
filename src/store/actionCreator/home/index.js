@@ -57,9 +57,9 @@ export default {
     // 演唱会
     getFloorShow() {
         return async (dispatch) => {
-            const { data } = await this.$axios.get("/m/home/index/getFloorShow?city_id=1&version=6.0.8&referer=2")
-            dispatch(FloorShow(data))
-
+            const { data } = await this.$axios.get("/m/home/index/getFloorShow?city_id=1&version=6.0.8&referer=2");
+            console.log(4444444444,data)
+            dispatch(FloorShow(data));
         }
     }
 }

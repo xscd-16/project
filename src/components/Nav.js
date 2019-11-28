@@ -31,11 +31,11 @@ class Nav extends React.Component{
     }
     componentDidMount(){
         axios.get("/m/home/index/getClassifyHome").then(data=>{
-            this.navList = data.data.data.classify_list
+            this.navList = data.data.classify_list
             this.setState({
                 navList:this.navList
             })
-            console.log(data.data.data.classify_list)
+            console.log(data.data.classify_list)
         })
     }
 }

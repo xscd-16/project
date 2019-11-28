@@ -8,9 +8,9 @@ import "../zja-App.css"
             <div>
               我是一个模块组件
               {
-                this.props.floorShowList.map(v=>(
-                  <div>111</div>
-                ))
+                // this.props.floorShowList.map(v=>(
+                //   <div>111</div>
+                // ))
               }
               <div className="Z_ych">
                 <div className="Z_ych_title">
@@ -45,7 +45,7 @@ import "../zja-App.css"
                         
                     
                     
-                    
+            
                     </div>
                 </div>
               </div>
@@ -59,7 +59,7 @@ import "../zja-App.css"
     }
 }
 function mapStateToProps(state){
-  console.log(state.home)
+  console.log(333333333,state.home)
     return {
       num:state.home.num,
       floorShowList:state.home.floorShowList,

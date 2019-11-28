@@ -41,8 +41,8 @@ class CarouselList extends React.Component {
     }
     getCarouselList() {
         axios.get("/m/home/index/getClassifyHome").then(data => {
-            this.carouselList = data.data.data.slide_list
-            //console.log(data.data.data.slide_list)
+            this.carouselList = data.data.slide_list
+            console.log(22222222222,data.data.slide_list)
             this.setState({
                 carouselList:this.carouselList
                 
