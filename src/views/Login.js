@@ -20,68 +20,24 @@ class Login extends React.Component{
             </div>
         )
     }
+
     componentDidMount(){
         console.log(this.props.mess)
     }
     logoIn(){
       this.props.logoIn.call(this)
-    //   this.props.history.push("/mine")
-    //   const {data}=await  this.$axios.post("/p/logoin",{
-    //       phoneId:this.refs.phone.value,
-    //       code:this.refs.it.value
-    //   });
-    //   if(data.ok===1){
-    //       alert(data.msg)
-    //   }else if(data.ok===-2){
-    //         alert(data.msg)
-    //   }else{
-    //       alert(data.msg)
-    //   }
     }
     getCheck(){
         if(/^1[3456789]\d{9}$/.test(this.refs.phone.value)){
             console.log(this.refs.phone.value)
             const phoneId=this.refs.phone.value;
             this.props.getCode.call(this,phoneId)
-        //  const {data}=await   this.$axios.get("/p/logo",{
-        //         params:{
-        //             phoneId
-        //         }
-        //     })
-            // console.log(data)
-            // this.refs.bt.disabled=true;
-            // this.setState({
-            //     checkNum:this.state.num
-            // })
-            // if(data.ok===1){
-            //     this.refs.it.value=data.code;
-            //   let t= setInterval(()=>{
-            //         this.setState({
-            //             checkNum:this.state.checkNum-1
-            //         })
-            //     if(this.state.checkNum<1){
-            //         this.setState({
-            //             checkNum:"获取验证码"
-            //         })
-            //         this.refs.bt.disabled=false;
-            //         clearInterval(t)
-            //     }
-            //     // console.log(this.state.checkNum)
-            //    },1000) 
-            // }
-        }else{
-            alert("请输入正确的手机号码")
-        }
-        
+    }else{
+        alert("请输入正确的手机号")
     }
-    componentWillUnmount(){
-        // 卸载异步操作设置状态
-        this.setState = (state, callback) => {
-            return;
-        }
-    }
-    
 }
+}
+
 function mapStateToProps(state){
     return{
         mess:state.logo

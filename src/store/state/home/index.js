@@ -1,3 +1,12 @@
 export default{
-    num:[]
+    num: [],
+    recommendList: [],
+    performanceDetail: {
+        static_data: {
+            pic: ""
+        }
+    },
+    //演唱会
+    floorShowList:[],
+    floorShowContent:{}
 }

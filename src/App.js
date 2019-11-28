@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route,Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Login from "./views/Login";
 import Site from "./views/Site";
 import PerformanceDetail from "./views/PerformanceDetail";
@@ -17,5 +17,4 @@ function App(props) {
     </div>
   )
 }
-
 export default App;
