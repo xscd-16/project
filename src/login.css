@@ -1,7 +1,8 @@
 .header{
     padding:40px;
 }
-h1{
+.logo-h1{
+    font-size: 32px;
     margin-bottom: 40px;
 }
 .height{
@@ -31,6 +32,7 @@ h1{
     display: flex;
 }
 .div1{
+    text-align: center;
     margin:40px auto;
     width:200px;
     height:50px;

@@ -16,12 +16,12 @@ export default{
     //发送验证码
     sendCode(phoneId){
         return async (dispatch)=>{
-            const {data}=await   this.$axios.get("/p/logo",{
+            const data=await   this.$axios.get("/p/logo",{
                 params:{
                     phoneId
                 }
             })
-            console.log(data)
+            console.log(data,666)
             this.refs.bt.disabled=true;
             this.setState({
                 checkNum:this.state.num
@@ -47,7 +47,7 @@ export default{
     },
     logoIn(){
         return async dispatch=>{
-            const {data}=await  this.$axios.post("/p/logoin",{
+            const data=await  this.$axios.post("/p/logoin",{
                 phoneId:this.refs.phone.value,
                 code:this.refs.it.value
             });
