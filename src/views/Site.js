@@ -6,7 +6,7 @@ import Mine from "./site/Mine.js";
 import Theatre from "./site/Theatre.js";
 import Tickets from "./site/Tickets.js";
 import GuardRouter from '../router/GuardRouter';
- class Site extends React.Component {
+class Site extends React.Component {
     render() {
         return (
             <div className="Site">
@@ -21,6 +21,4 @@ import GuardRouter from '../router/GuardRouter';
         )
     }
 }
-
-
 export default Site;
