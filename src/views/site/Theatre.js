@@ -10,14 +10,6 @@ import {
 } from "redux";
 import theatreCreator from "../../store/actionCreator/theatre"
 class Theatre extends React.Component{
-    // constructor(){
-    //     super();
-    //     this.state={
-    //         theatreList:[],
-    //         pageNo:0,
-    //         pageSize:15
-    //     }
-    // }
     render(){
         return (
             <>
@@ -70,49 +62,13 @@ class Theatre extends React.Component{
     componentDidMount(){
         this.props.getTheatreList()
     }
-    // async getTheatreList(){
-    //     const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
-    //     console.log(data.data.theatre_list)
-    //     this.setState({
-    //         theatreList:data.data.theatre_list
-    //     })
-    // }
 }
 function mapStateToProps(state,props){
     return {
         theatreList:state.theatre.theatreList
     }
 }
-// function mapDispathcToProps(dispatch){
-//     return bindActionCreators(theatreCreator,dispatch);
-
-//     // return {
-//     //     // 异步dispatch
-//     //     getTheatreList(){
-//     //         dispatch(theatreCreator.getTheatreList.call(this))
-//     //         // dispatch(async (dispatch)=>{
-//     //         //     const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
-//     //         //     console.log(data.data.theatre_list)
-//     //         //     dispatch({
-//     //         //         type:"UP_THERTRE",
-//     //         //         payload:{
-//     //         //             theatreList:data.data.theatre_list
-//     //         //         }
-//     //         //     })
-//     //         // })
-//     //     }
-        
-//     //     // 同步dispathc
-//     //     // async getTheatreList(){
-//     //     //     const {data}=await axios.get("/m/theatre/index/getTheatreList?page=1&version=6.0.8&referer=2")
-//     //     //     console.log(data.data.theatre_list)
-//     //     //     dispatch({
-//     //     //         type:"UP_THERTRE",
-//     //     //         payload:{
-//     //     //             theatreList:data.data.theatre_list
-//     //     //         }
-//     //     //     })
-//     //     // }
-//     // }
-// }
+function mapDispathcToProps(dispatch){
+    return bindActionCreators(theatreCreator,dispatch);
+}
 export default connect(mapStateToProps,(dispatch)=>bindActionCreators(theatreCreator,dispatch))(Theatre);
