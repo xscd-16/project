@@ -20,6 +20,7 @@ h1{
 }
 .span{
     display: block;
+    width:73px;
     height: 34px;
     border:1px solid gray;
     padding: 2px;
@@ -28,4 +29,12 @@ h1{
 }
 .div{
     display: flex;
+}
+.div1{
+    margin:40px auto;
+    width:200px;
+    height:50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background: orangered;
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import store from "./store/index";
 import './index.css';
 import './assets/iconfont/iconfont.css';
+import "./assets/iconfont-search/iconfont.css"
 import App from './App';
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
