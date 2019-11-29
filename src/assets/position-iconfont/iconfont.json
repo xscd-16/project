@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9981997",
+      "name": "定位",
+      "font_class": "icon-test1",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    }
+  ]
+}
