@@ -41,7 +41,7 @@ class PerformanceDetail extends React.Component {
             cancelButtonIndex: BUTTONS.length - 1,
             destructiveButtonIndex: BUTTONS.length - 2,
             // title: 'title',
-            message: 'I am description, description, description',
+            message: '分享演出',
             maskClosable: true,
             'data-seed': 'logId',
             wrapProps,
@@ -55,7 +55,7 @@ class PerformanceDetail extends React.Component {
         ActionSheet.showShareActionSheetWithOptions({
             options: this.dataList,
             // title: 'title',
-            message: 'I am description, description, description',
+            message: '分享演出',
         },
             (buttonIndex) => {
                 this.setState({ clicked1: buttonIndex > -1 ? this.dataList[buttonIndex].title : 'cancel' });
@@ -71,7 +71,7 @@ class PerformanceDetail extends React.Component {
         const data = [[...this.dataList, this.dataList[2]], [this.dataList[3], this.dataList[4]]];
         ActionSheet.showShareActionSheetWithOptions({
             options: data,
-            message: 'I am description, description, description',
+            message: '分享演出',
         },
             (buttonIndex, rowIndex) => {
                 this.setState({ clicked2: buttonIndex > -1 ? data[rowIndex][buttonIndex].title : 'cancel' });
@@ -99,7 +99,7 @@ class PerformanceDetail extends React.Component {
             destructiveButtonIndex: BUTTONS.length - 2,
             badges: BADGES,
             // title: 'title',
-            message: 'I am description, description, description',
+            message: '分享演出',
             maskClosable: true,
             'data-seed': 'logId',
             wrapProps,
@@ -114,9 +114,9 @@ class PerformanceDetail extends React.Component {
     render() {
         return (
             <div className="PerformanceDetail">
-                {/* {
-                    !this.state.animating ?
-                        <WingBlank >
+                {
+                    this.state.animating ?
+                        <WingBlank style={{height:0}}>
                             <div className="toast-container">
                                 <WhiteSpace size="xl" />
                                 <div className="toast-example">
@@ -129,7 +129,7 @@ class PerformanceDetail extends React.Component {
                             </div>
                         </WingBlank> :
                         null
-                } */}
+                }
 
                 {/* 头部背景 */}
                 <div className="header">
