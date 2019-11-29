@@ -7,4 +7,7 @@ export default class Theatre extends React.Component{
             </h1>
         )
     }
+    componentDidMount(){
+        console.log(this)
+    }
 }

@@ -8,7 +8,7 @@ import ZJAhome from "../../components/ZJAhome";
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div >
         {
           // this.props.num.map((v,i)=>(
           //     <div key={i}>
