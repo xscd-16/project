@@ -5,6 +5,8 @@ import homeAction from "../../store/actionCreator/home/index";
 import CarouselList from "../../components/CarouselList";
 import Nav from "../../components/Nav";
 import ZJAhome from "../../components/ZJAhome";
+import Feiremenyanchu from "../../components/Feiremenyanchu"
+import Feixunhuiyanchu from "../../components/Feixunhuiyanchu"
 class Home extends React.Component {
   render() {
     return (
@@ -18,6 +20,8 @@ class Home extends React.Component {
         }
         <CarouselList></CarouselList>
         <Nav></Nav>
+        <Feiremenyanchu></Feiremenyanchu>
+        <Feixunhuiyanchu></Feixunhuiyanchu>
         <ZJAhome></ZJAhome>
         <Recommend></Recommend>
       </div>
