@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 import * as serviceWorker from './serviceWorker';
+import 'antd-mobile/dist/antd-mobile.css'
 axios.interceptors.response.use(({ data }) => data);
 React.Component.prototype.$axios = axios;
 ReactDOM.render((

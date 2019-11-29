@@ -12,7 +12,13 @@ export default (state = initState, {type, payload}) => {
         // console.log(111111111,payload);
         state.floorShowList = payload;
         state.floorShowContent = payload[0];
-        console.log(99999999999999,state.floorShowList);
+        // console.log(99999999999999,state.floorShowList);
+    }else if(type === homeActionType.GET_YANCHU_LIST){
+        state.YanChuContent = payload
+        // console.log(88888888888,state.YanChuContent)
+    }else if(type === homeActionType.GET_YANCHU_NAV){
+        state.YanChuNav = payload
+        console.log(88888888888,payload)
     }
     return state;
 }

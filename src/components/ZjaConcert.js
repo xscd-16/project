@@ -128,6 +128,7 @@ import "../assets/iconfont/iconfont.css"
     }
 }
 function mapStateToProps(state){
+  // console.log(state.home.floorShowContent)
     return {
       floorShowList:state.home.floorShowList,
       floorShowContent:state.home.floorShowContent
@@ -135,8 +136,8 @@ function mapStateToProps(state){
   }
   function mapDispatchToProps(dispatch){
     return {
-        getFloorShow(){
-            dispatch(homeAction.getFloorShow.call(this))
+         getFloorShow(){
+             dispatch(homeAction.getFloorShow.call(this))
         }
 
     }

@@ -21,13 +21,30 @@ export const upPerformanceDetail = data => {
         payload: data.data
     }
 }
-// 演唱会
+
+//演出页面列表
 export const FloorShow = data => {
     return {
         type: homeActionType.GET_FLOOR_SHOW,
         payload: data
     }
 }
+
+// 演出页面
+export const YanchuList = data => {
+    return {
+        type: homeActionType.GET_YANCHU_LIST,
+        payload: data
+    }
+}
+//演出页面 导航
+export const YanchuNav = data => {
+    return {
+        type: homeActionType.GET_YANCHU_NAV,
+        payload: data
+    }
+}
+
 
 
 export default {
@@ -54,12 +71,27 @@ export default {
             dispatch(upPerformanceDetail(data));
         }
     },
-    // 演唱会     https://api.juooo.com/home/index/getFloorShow?city_id=0&version=6.0.8&referer=2
+    //张建安  首页演唱会     https://api.juooo.com/home/index/getFloorShow?city_id=0&version=6.0.8&referer=2
     getFloorShow() {
         return async (dispatch) => {
             const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
-            console.log(4444444444,data)
             dispatch(FloorShow(data));
         }
-    }
+    },
+
+    //张建安  演出页面  列表、导航
+    //列表 https://api.juooo.com/Show/Search/getShowList?category=35&city_id=0&page=1&keywords=&version=6.0.8&referer=2
+    //导航 https://m.juooo.com/Search/getShowCategory?version=6.0.8&referer=2
+    getYanchuList() {
+        return async (dispatch) => {
+            const { data } = await this.$axios.get("/m/Show/Search/getShowList?category=35&city_id=0&page=1&keywords=&version=6.0.8&referer=2");
+            dispatch(YanchuList(data));
+        }
+    },
+    getYanchuNav() {
+        return async (dispatch) => {
+            const { data } = await this.$axios.get("/m/Search/getShowCategory?version=6.0.8&referer=2");
+            dispatch(YanchuNav(data));
+        }
+    },
 }

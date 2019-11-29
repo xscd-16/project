@@ -31,6 +31,10 @@
   content: "\e635";
 }
 
+.icon-zjazhuye:before {
+  content: "\e635";
+}
+
 .icon-fenxiang:before {
   content: "\e6a3";
 }
@@ -42,8 +46,14 @@
 .icon-dingwei:before {
   content: "\e610";
 }
+.icon-zjadingwei:before {
+  content: "\e610";
+}
 
 .icon-home_my:before {
+  content: "\e600";
+}
+.icon-zjahome_my:before {
   content: "\e600";
 }
 
@@ -56,6 +66,9 @@
 }
 
 .icon-fanhui:before {
+  content: "\e622";
+}
+.icon-zjafanhui:before {
   content: "\e622";
 }
 
