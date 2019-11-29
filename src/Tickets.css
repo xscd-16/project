@@ -1,0 +1,42 @@
+.Tickets{
+    width: 100%;
+    height: 100%;
+    background: #fefefe;
+    
+}
+.Tickets #first{
+    width: 90%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 2rem;
+}
+.Tickets #first i{
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #232323;
+}
+.Tickets #first p{
+    font-size: 1.5rem;
+    margin-top: -.2rem;
+}
+.Tickets #con{
+    padding-top: 20%;
+}
+.Tickets #con img{
+    display: block;
+    width: 12rem;
+    height: 8rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.Tickets #con p{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 200;
+    color: #999;
+}

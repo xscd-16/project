@@ -20,6 +20,7 @@ function _connect() {
 * 1、collName:指定集合的名字
 * 2、insertObj:指定插入的文档*/
 module.exports.insertOne = async function (collName,insertObj) {
+    console.log(2222222)
     const db = await _connect();// 获得数据库信息
     return new Promise((resolve,reject)=>{
         db.collection(collName).insertOne(insertObj,function (err,results) {
@@ -54,6 +55,17 @@ module.exports.findOne = async function (collName,whereObj) {
         })
     })
 }
+module.exports.findOneById = async function (collName,id) {
+    const db = await _connect();
+    return new Promise((resolve,reject)=>{
+        db.collection(collName).findOne({_id:mongodb.ObjectId(id)},function (err,results) {
+            if(err)
+                reject(err);
+            else
+                resolve(results);
+        })
+    })
+}
 // 查找
 module.exports.find = async function (collName,{whereObj={},limit=0,skip=0,sortObj={}}) {
     const db = await _connect();
@@ -70,6 +82,19 @@ module.exports.find = async function (collName,{whereObj={},limit=0,skip=0,sortO
                     resolve(results);
             });
     })
+}
+// 根据条件更新你的数据。
+module.exports.updateOne = async function (collName,whereObj,updateObj) {
+    const db = await _connect();
+    return new Promise((resolve,reject)=>{
+        db.collection(collName).updateOne(whereObj,updateObj,function (err,results) {
+            if(err)
+                reject(err);
+            else
+                resolve(results);
+        })
+    })
+
 }
 // 根据ID更新你的数据。
 module.exports.updateOneById = async function (collName,_id,updateObj) {
