@@ -1,42 +1,43 @@
 import React from "react"
-import axios from "axios"
 import "../assets/css/nav.css"
-import "../assets/css/reset.css"
-class Nav extends React.Component{
-    constructor(){
-        super()
-        this.state = {
-            navList:[]
-        }
-    }
-    render(){
-        return(
-            <div>
-            <div className="nav1">
-            <ul>
-                {
-                    this.state.navList.map(v=>(
-                        <li key={v.id}>
-                        <a href={v.url}>
-                            <img src={v.pic} alt=""/>
-                            <p>{v.name}</p>
-                        </a>
-                        </li>
-                    ))
-                }
-            </ul>
-            </div>            
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import homeAction from "../store/actionCreator/home/index";
+class Nav extends React.Component {
+    render() {
+        return (
+            <div id="nav_list">
+                <div className="nav1">
+                    <ul>
+                        {
+                            this.props.navList.map(v => (
+                                <li key={v.id}>
+                                    <a href={v.url}>
+                                        <img src={v.pic} alt="" />
+                                        <p>{v.name}</p>
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         )
     }
-    componentDidMount(){
-        axios.get("/m/home/index/getClassifyHome").then(data=>{
-            this.navList = data.data.classify_list
-            this.setState({
-                navList:this.navList
-            })
-            console.log(data.data.classify_list)
-        })
+    componentDidMount() {
+        this.props.getNavList.call(this)
     }
 }
-export default Nav
+function mapStateToProps(state) {
+    return {
+        navList: state.home.navList
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        async getNavList() {
+            await dispatch(homeAction.getNavList.call(this))
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Nav))

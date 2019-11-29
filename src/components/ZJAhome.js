@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import homeAction from "../store/actionCreator/home/index"
-import "../zja-App.css"
+// import "../zja-App.css"
  class ZJAhome extends React.Component{
     render() {
         return (
@@ -59,7 +59,7 @@ import "../zja-App.css"
     }
 }
 function mapStateToProps(state){
-  console.log(333333333,state.home)
+  //console.log(333333333,state.home)
     return {
       num:state.home.num,
       floorShowList:state.home.floorShowList,

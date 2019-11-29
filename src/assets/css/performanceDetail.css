@@ -1,0 +1,128 @@
+/* 演出详情 */
+.PerformanceDetail{
+    background: #f1f1f1;
+    position: relative;
+  }
+  .PerformanceDetail .header{
+    width:100%;
+    height:14rem;
+    margin:0;
+    padding:0;
+    background-size: 100%;
+    position: relative;
+    background:#888;
+  }
+  .PerformanceDetail .header .head{
+    width:100%;
+    display: block;
+    height:3rem;
+    position: relative;
+    margin:0;
+    padding:0;
+  }
+  .PerformanceDetail .header .head span{
+    position: absolute;
+    color:#fff;
+  }
+  .PerformanceDetail .header .head .icon-fanhui{
+   top:.6rem;
+   font-size:1.4rem;
+  }
+  .PerformanceDetail .header .head .titleCon{
+    font-size:1.2rem;
+    font-weight:bold;
+    left:9rem;
+    top:.5rem;
+    line-height:2rem;
+   }
+   .PerformanceDetail .header .head .icon-fenxiang{
+     font-size:1.4rem;
+    right:4rem;
+    top:.7rem;
+   }
+   .PerformanceDetail .header .head .icon-zhuye{
+    font-size:1.6rem;
+    top:.5rem;
+    right:1rem;
+   }
+   .PerformanceDetail .main2-item{
+     height:3rem;
+     background: #fbfbfb;
+     line-height:3rem;
+   }
+   .PerformanceDetail .main2-item span{
+    font-size:.9rem;
+    color:#888;
+  }
+  .PerformanceDetail .main3{
+    background: #fff;
+  }
+  .PerformanceDetail .main3 img{
+   width:100%;
+  }
+  .PerformanceDetail .main3 strong{
+    font-weight:bold;
+    padding:0 0 1rem 0rem;
+   }
+   .PerformanceDetail .main4 ul{
+    list-style:decimal;
+    margin-left:1rem;
+  }
+  .PerformanceDetail .main4 ul li{
+    list-style-type: disc;
+    flex:1;
+    color:#888;
+    font-size:.8rem;
+  }
+  
+  
+  
+  /* 相关推荐AboutRecommend */
+  .AboutRecommend{
+    padding: 0 0.8rem;
+    background: #fbfbfb;
+  }
+  .AboutRecommend h3 {
+   text-align: left;
+   font-size:1.2rem;
+   height:3rem;
+   line-height:3rem;
+   font-weight:bold;
+  }
+  .AboutRecommend h5 {
+    font-weight:bold;
+    height:2rem;
+    text-overflow: ellipsis;
+   }
+  .AboutRecommend .recommendItem {
+    height:10rem;
+    background: #fff;
+    margin-bottom:1rem;
+    display: flex;
+    align-items: center;
+  }
+  .AboutRecommend .recommendItem img{
+    height:9rem;
+    width:6.6rem;
+  }
+  .AboutRecommend .recommendItem .item-info {
+    height:9rem;
+    padding-left:.8rem;
+    text-align: left;
+    width:100%;
+  }
+  
+  
+  .loading-example {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .align {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }

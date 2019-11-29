@@ -1,0 +1,40 @@
+
+/* 底部导航TabBar */
+footer{
+    width:100%;
+    box-sizing: border-box;
+    height:3rem;
+    display: flex;
+    justify-content: space-around;
+    background: #fbfbfb;
+    position: fixed;
+    bottom:0;
+    overflow: hidden;
+  }
+  .App-link {
+    color: #555;
+    margin:5px;
+    font-size:1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Home-link {
+    margin:5px;
+    font-size:1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .App-active{
+    color: orange;
+  }
+  .item-desc{
+    font-size:.8rem;
+  }
+  .item-icon{
+    font-size:1.6rem;
+    font-weight:bold;
+  }
+  
+  

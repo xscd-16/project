@@ -7,29 +7,31 @@ import Nav from "../../components/Nav";
 import ZJAhome from "../../components/ZJAhome";
 import Feiremenyanchu from "../../components/Feiremenyanchu"
 import Feixunhuiyanchu from "../../components/Feixunhuiyanchu"
+
+import HomeSearch from "../../components/HomeSearch"
+
+import ZjaConcert from "../../components/ZjaConcert";
 class Home extends React.Component {
   render() {
     return (
       <div>
-        {
-          // this.props.num.map((v,i)=>(
-          //     <div key={i}>
-          //       {v.show_name}
-          //     </div>
-          // ))
-        }
-        <CarouselList></CarouselList>
+        <HomeSearch></HomeSearch>
+        <CarouselList >
+        </CarouselList>
         <Nav></Nav>
         <Feiremenyanchu></Feiremenyanchu>
         <Feixunhuiyanchu></Feixunhuiyanchu>
         <ZJAhome></ZJAhome>
+        
+        <ZjaConcert></ZjaConcert>
         <Recommend></Recommend>
       </div>
     )
   }
+  
   componentDidMount() {
     this.props.getList.call(this)
-
+    window.addEventListener('scroll', this.handleScroll);
   }
 }
 function mapStateToProps(state) {
