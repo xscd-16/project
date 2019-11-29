@@ -18,6 +18,11 @@ export default (state = initState, {type, payload}) => {
     }else if(type === homeActionType.GET_NAV_LIST){
         //console.log(777777,payload)
         state.navList = payload.classify_list
+    } else if (type === homeActionType.UPABOUTRECOMMEND) {
+        state.aboutRecommend = payload;
+    }else if(type===homeActionType.GET_FLOOR_SHOW){
+        state.floorShowList = payload;
+        state.floorShowContent = payload[0];
     }
     return state;
 }

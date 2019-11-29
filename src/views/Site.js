@@ -10,7 +10,11 @@ class Site extends React.Component {
     render() {
         return (
             <div className="Site">
+<<<<<<< HEAD
                 <nav>
+=======
+                <nav sytle={{overflow:"auto"}}>
+>>>>>>> eee208f7431315051728f640a1ff5aef59235950
                     <Route path={"/theatre"} render={() => <GuardRouter component={Theatre} />}></Route>
                     <Route path={"/mine"} render={() => <GuardRouter component={Mine} />}></Route>
                     <Route path={"/tickets"} render={() => <GuardRouter component={Tickets} />}></Route>
