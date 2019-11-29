@@ -109,22 +109,27 @@ class PerformanceDetail extends React.Component {
     }
     showToast = () => {
         this.setState({ animating: !this.state.animating });
-      }
+    }
     render() {
         return (
             <div className="PerformanceDetail">
-                <WingBlank>
-                    <div className="toast-container">
-                        <WhiteSpace size="xl" />
-                        <div className="toast-example">
-                            <ActivityIndicator
-                                toast
-                                text="Loading..."
-                                animating={this.state.animating}
-                            />
-                        </div>
-                    </div>
-                </WingBlank>
+                {
+                    !this.state.animating ?
+                        <WingBlank >
+                            <div className="toast-container">
+                                <WhiteSpace size="xl" />
+                                <div className="toast-example">
+                                    <ActivityIndicator
+                                        toast
+                                        text="Loading..."
+                                        animating={this.state.animating}
+                                    />
+                                </div>
+                            </div>
+                        </WingBlank> :
+                        ""
+                }
+
                 {/* 头部背景 */}
                 <div className="header">
                     <p className="head">
@@ -715,7 +720,7 @@ class PerformanceDetail extends React.Component {
     async componentDidMount() {
         await this.props.getPerformanceDetail.call(this, this.props.location.state.schedular_id);
         await this.props.getAboutRecommend.call(this, this.props.location.state.cate_parent_id);
-           this.setState({ animating: !this.state.animating });
+        this.setState({ animating: !this.state.animating });
     }
 }
 function mapStateToProps(state) {
