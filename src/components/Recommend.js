@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/recommend.css";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import homeAction from "../store/actionCreator/home/index";
@@ -11,7 +12,7 @@ class Recommend extends React.Component {
                     {
                         this.props.recommendList.map(item => (
                             <div className="recommendItem" key={item.schedular_id}
-                            onClick={() => this.props.history.push({ pathname: "/performanceDetail", state: {schedular_id:item.schedular_id} })}>
+                            onClick={() => this.props.history.push({ pathname: "/performanceDetail", state: {schedular_id:item.schedular_id,cate_parent_id:item.cate_parent_id} })}>
                                 <img src={item.pic} alt="演出图片"/>
                                 <div className="item-info">
                                     {
@@ -72,7 +73,7 @@ function mapDispatchToProps(dispatch) {
     return {
         async getRecommendList() {
             await dispatch(homeAction.getRecommendList.call(this));
-            console.log(this.props.recommendList);
+            //console.log(this.props.recommendList);
         }
     }
 }

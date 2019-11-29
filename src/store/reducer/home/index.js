@@ -8,11 +8,16 @@ export default (state = initState, {type, payload}) => {
         state.recommendList = payload.data.list;
     } else if (type === homeActionType.UPPERFORMANCEDETAIL) {
         state.performanceDetail = payload;
+    }else if(type === homeActionType.GET_CAROUSEL_LIST){
+        state.carouselList = payload.slide_list
+    }else if(type === homeActionType.GET_NAV_LIST){
+        //console.log(777777,payload)
+        state.navList = payload.classify_list
+    } else if (type === homeActionType.UPABOUTRECOMMEND) {
+        state.aboutRecommend = payload;
     }else if(type===homeActionType.GET_FLOOR_SHOW){
-        console.log(111111111,payload);
         state.floorShowList = payload;
-        // state.floorShowContent = payload[0].list;
-        console.log(state.floorShowList);
+        state.floorShowContent = payload[0];
     }
     return state;
 }
