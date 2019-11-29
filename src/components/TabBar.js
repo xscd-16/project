@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/tabbar.css";
 import {
     NavLink
 } from "react-router-dom";

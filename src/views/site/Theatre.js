@@ -1,4 +1,4 @@
-import TabBar from "../../components/TabBar";
+
 import React from "react";
 import '../../Theatre.css';
 import {

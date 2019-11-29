@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import store from "./store/index";
 import './index.css';
 import './assets/iconfont/iconfont.css';
+import "../node_modules/react-pullload/dist/ReactPullLoad.css";
+import 'antd-mobile/dist/antd-mobile.css';
 import "./assets/iconfont-search/iconfont-search.css"
 import App from './App';
 import { Provider } from "react-redux";

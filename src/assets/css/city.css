@@ -1,0 +1,76 @@
+.city_body {
+    background: #ebebeb;
+    height: 100%;
+}
+.position_city{
+    line-height: 15px;
+    padding-left: 0.26rem;
+    padding-top:5px;
+    font-size: 15px;
+}
+.position_city_all{
+    margin-top: 0.3rem;
+    margin-left: 0.26rem;
+    width: 102px;
+    height: 33px;
+    background: #fff;
+    text-align: center;
+    line-height: 33px;
+    font-size: 13px;
+    border: 2px solid #e6e6e6;
+}
+/*热门城市*/
+.hot_title,
+.city_title_letter {
+    line-height: 15px;
+    padding-left: 0.26rem;
+    padding-top:5px;
+    font-size: 15px;
+}
+
+.hot_city_list,
+.city_list_name {
+    width: 96%;
+    background: #f5f5f5;
+    padding-bottom: 0.16rem;
+    padding-right: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hot_city_name {
+    margin-top: 0.3rem;
+    margin-left: 0.26rem;
+    width: 102px;
+    height: 33px;
+    background: #fff;
+    text-align: center;
+    line-height: 33px;
+    font-size: 13px;
+    border: 2px solid #e6e6e6;
+    
+}
+
+.city_list>div {
+    width: 100%;
+}
+
+.city_list_name_item {
+    line-height:33px;
+    margin-left: 0.26rem;
+    width: 100%;
+    border-bottom: 2px solid #e6e6e6;
+    font-size: 13px;
+}
+
+/*城市列表下标*/
+.city_list_index {
+    position: fixed;
+    right: 0;
+    top: 1rem;
+}
+
+.city_list_index>div {
+    padding: 0.1rem 0.05rem;
+    font-size: 0.25rem;
+}

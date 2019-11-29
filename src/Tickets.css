@@ -1,7 +1,6 @@
 .Tickets{
     width: 100%;
     height: 100%;
-    background: #fefefe;
     
 }
 .Tickets #first{
@@ -11,6 +10,10 @@
     justify-content: space-between;
     align-items: center;
     padding:0 2rem;
+    background: #fefefe;
+}
+.Tickets #first span{
+    font-size: 1.1rem;
 }
 .Tickets #first i{
     text-align: center;
@@ -25,6 +28,7 @@
 }
 .Tickets #con{
     padding-top: 20%;
+    height: 100%;
 }
 .Tickets #con img{
     display: block;
