@@ -121,13 +121,13 @@ export default {
             // console.log("相关推荐返回数据",data);
             dispatch(upAboutRecommend(data.data.list));
         }
-    }
+    },
     // 演唱会     https://api.juooo.com/home/index/getFloorShow?city_id=0&version=6.0.8&referer=2
-    // getFloorShow() {
-    //     return async (dispatch) => {
-    //         const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
-    //         console.log(4444444444, data)
-    //         dispatch(FloorShow(data));
-    //     }
-    // }
+    getFloorShow() {
+        return async (dispatch) => {
+            const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
+            console.log(4444444444, data)
+            dispatch(FloorShow(data));
+        }
+    }
 }

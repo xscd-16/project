@@ -13,7 +13,7 @@ class Home extends React.Component {
     return (
       <div>
         <HomeSearch></HomeSearch>
-        <CarouselList>
+        <CarouselList >
         </CarouselList>
         <Nav></Nav>
         
@@ -22,9 +22,10 @@ class Home extends React.Component {
       </div>
     )
   }
+  
   componentDidMount() {
     this.props.getList.call(this)
-
+    window.addEventListener('scroll', this.handleScroll);
   }
 }
 function mapStateToProps(state) {

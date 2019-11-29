@@ -122,6 +122,7 @@ class ZjaConcert extends React.Component {
   }
 }
 function mapStateToProps(state) {
+  //console.log(state)
   return {
     floorShowList: state.home.floorShowList,
     floorShowContent: state.home.floorShowContent

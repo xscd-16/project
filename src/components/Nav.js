@@ -6,7 +6,7 @@ import homeAction from "../store/actionCreator/home/index";
 class Nav extends React.Component {
     render() {
         return (
-            <div>
+            <div id="nav_list">
                 <div className="nav1">
                     <ul>
                         {

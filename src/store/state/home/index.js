@@ -28,5 +28,7 @@ export default{
     aboutRecommend: [],
     //演唱会
     floorShowList:[],
-    floorShowContent:{}
+    floorShowContent:{},
+    navList:[],
+    carouselList:[]
 }

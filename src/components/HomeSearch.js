@@ -6,10 +6,17 @@ import calendar from '../assets/img/calendar.png'
 import City from "../views/site/City"
 import {NavLink} from 'react-router-dom'
 class HomeSearch extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            bg:"transparent",
+            position_color:"#fff"
+        }
+    }
     render(){
         return(
-            <div id="home_search_all" style={{
-                width:"100%"
+            <div ref="home_search" id="home_search_all" style={{
+                width:"100%",    
             }}>
                 <header className="home_top" style={{
                     display:"flex",
@@ -17,12 +24,12 @@ class HomeSearch extends React.Component{
                     width:"100%",
                     height:"44px",
                     padding:"0 15px",
-                    position:"absolute",
+                    position:"fixed",
                     left:"0",
                     top:"0",
                     boxSizing: "border-box",
                     zIndex: "10",
-                    backgroundColor:"transparent",
+                    backgroundColor:this.state.bg,
                     borderBottom:"0"
                 }}>
                 <NavLink to={"/city"}>
@@ -36,11 +43,10 @@ class HomeSearch extends React.Component{
                         justifyContent: "center"
                     }}>
                         <strong className="iconfont icon-icon-test1" style={{
-                            color:"#fff",
+                            color:this.state.position_color,
                             width:"10px",
                             height:"13px",
-                            textAlign:"center",
-                            
+                            textAlign:"center",  
                         }}></strong>
                        
                         <span style={{
@@ -103,5 +109,22 @@ class HomeSearch extends React.Component{
             </div>
         )
     }
+    handleScroll(){
+        let scrollHeight =document.documentElement.scrollTop;
+        if(scrollHeight >2){ 
+            this.setState({
+                bg:"#ccc",
+                position_color:"orange"
+            })
+        }else{
+            this.setState({
+                bg:"transparent",
+                position_color:"#fff"
+            })
+        }
+      }
+      componentDidMount() {  
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+      }
 }
 export default HomeSearch
