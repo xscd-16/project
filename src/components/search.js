@@ -107,14 +107,12 @@ class Search extends React.Component {
         
     }
     changeHandler(e) {
-        console.log("lalalalala")
         this.setState({
             value: e.target.value
         }, () => {
             this.setState({
                 isHot:false
             },()=>{
-                console.log(this.state.isHot)
                if(this.refs.word.value){
                 this.props.getShowList.call(this,this.refs.word.value)
                }else{
