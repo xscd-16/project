@@ -54,10 +54,10 @@ export default {
             dispatch(upPerformanceDetail(data));
         }
     },
-    // 演唱会
+    // 演唱会     https://api.juooo.com/home/index/getFloorShow?city_id=0&version=6.0.8&referer=2
     getFloorShow() {
         return async (dispatch) => {
-            const { data } = await this.$axios.get("/m/home/index/getFloorShow?city_id=1&version=6.0.8&referer=2");
+            const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
             console.log(4444444444,data)
             dispatch(FloorShow(data));
         }

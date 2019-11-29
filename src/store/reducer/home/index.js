@@ -9,10 +9,10 @@ export default (state = initState, {type, payload}) => {
     } else if (type === homeActionType.UPPERFORMANCEDETAIL) {
         state.performanceDetail = payload;
     }else if(type===homeActionType.GET_FLOOR_SHOW){
-        console.log(111111111,payload);
+        // console.log(111111111,payload);
         state.floorShowList = payload;
-        // state.floorShowContent = payload[0].list;
-        console.log(state.floorShowList);
+        state.floorShowContent = payload[0];
+        console.log(99999999999999,state.floorShowList);
     }
     return state;
 }

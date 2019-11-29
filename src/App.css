@@ -19,7 +19,10 @@
 a{
   text-decoration: none;
 } */
-
+.App{
+  overflow: auto;
+  height:3000px;
+}
 
 /* 底部导航TabBar */
 footer{

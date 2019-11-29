@@ -17,10 +17,10 @@ class Nav extends React.Component{
                 {
                     this.state.navList.map(v=>(
                         <li key={v.id}>
-                        <a href={v.url}>
+                            <a href="/showList">
                             <img src={v.pic} alt=""/>
                             <p>{v.name}</p>
-                        </a>
+                            </a>
                         </li>
                     ))
                 }
@@ -35,7 +35,6 @@ class Nav extends React.Component{
             this.setState({
                 navList:this.navList
             })
-            console.log(data.data.classify_list)
         })
     }
 }
