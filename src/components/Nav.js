@@ -1,7 +1,7 @@
 import React from "react"
 import axios from "axios"
 import "../assets/css/nav.css"
-import "../assets/css/reset.css"
+// import "../assets/css/reset.css"
 class Nav extends React.Component{
     constructor(){
         super()
@@ -17,10 +17,10 @@ class Nav extends React.Component{
                 {
                     this.state.navList.map(v=>(
                         <li key={v.id}>
-                        <a href={v.url}>
+                            <a href="/showList">
                             <img src={v.pic} alt=""/>
                             <p>{v.name}</p>
-                        </a>
+                            </a>
                         </li>
                     ))
                 }

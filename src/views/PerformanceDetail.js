@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/performanceDetail.css";
 import { connect } from "react-redux";
 import { ActionSheet, WingBlank, WhiteSpace, Button, Toast, ActivityIndicator } from 'antd-mobile';
 import homeAction from "../store/actionCreator/home/index";
@@ -113,7 +114,7 @@ class PerformanceDetail extends React.Component {
     render() {
         return (
             <div className="PerformanceDetail">
-                {
+                {/* {
                     !this.state.animating ?
                         <WingBlank >
                             <div className="toast-container">
@@ -127,8 +128,8 @@ class PerformanceDetail extends React.Component {
                                 </div>
                             </div>
                         </WingBlank> :
-                        ""
-                }
+                        null
+                } */}
 
                 {/* 头部背景 */}
                 <div className="header">
@@ -441,7 +442,7 @@ class PerformanceDetail extends React.Component {
                     </div>
                 </div>
                 {/* 演出介绍 */}
-                {/* <div className="main3" >
+                <div className="main3" >
                     <h3 style={{
                         height: "1rem",
                         fontSize: "1.2rem",
@@ -458,7 +459,7 @@ class PerformanceDetail extends React.Component {
 
                         }}
                     ></div>
-                </div> */}
+                </div>
                 {/* 温馨提醒 */}
                 <div className="main4"
                     style={{

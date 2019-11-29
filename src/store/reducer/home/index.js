@@ -11,10 +11,8 @@ export default (state = initState, {type, payload}) => {
     } else if (type === homeActionType.UPABOUTRECOMMEND) {
         state.aboutRecommend = payload;
     }else if(type===homeActionType.GET_FLOOR_SHOW){
-        // console.log(111111111,payload);
         state.floorShowList = payload;
-        // state.floorShowContent = payload[0].list;
-        // console.log(state.floorShowList);
+        state.floorShowContent = payload[0];
     }
     return state;
 }

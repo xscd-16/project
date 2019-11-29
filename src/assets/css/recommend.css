@@ -1,0 +1,39 @@
+
+
+/* 为你推荐Recommend */
+.Recommend{
+    padding: 0 0.8rem;
+    background: #fbfbfb;
+  }
+  .Recommend h3 {
+   text-align: left;
+   font-size:1.2rem;
+   height:3rem;
+   line-height:3rem;
+  }
+  .Recommend h5 {
+    font-weight:bold;
+    height:2rem;
+    text-overflow: ellipsis;
+    line-height:1.3rem;
+   }
+  .Recommend .recommendItem {
+    height:10rem;
+    background: #fff;
+    margin-bottom:1rem;
+    display: flex;
+    align-items: center;
+  }
+  .Recommend .recommendItem img{
+    height:9rem;
+    width:6.6rem;
+  }
+  .Recommend .recommendItem .item-info {
+    height:9rem;
+    padding-left:.8rem;
+    text-align: left;
+    width:100%;
+  }
+  
+  
+  
