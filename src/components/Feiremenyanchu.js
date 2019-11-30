@@ -52,7 +52,7 @@ class Feiremenyanchu extends React.Component {
                                                             }}>
                                         <img src={v.pic} alt="" style={{width: "100%",height: "100%"}} />
                                     </div>
-                                    <h3 id="swiper-container-text" style={{fontSize: "18px",color:"#232323",fontWeight: "800",marginBottom:"3px"}}
+                                    <h3 id="swiper-container-text" style={{fontSize: "16px",color:"#232323",fontWeight: "800",marginBottom:"3px"}}
                                     /* ,由于溢出文字问题，将部分样式引导外部了style={{
                                         width: "107px",
                                         whiteSpace: "nowrap",

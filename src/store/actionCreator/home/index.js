@@ -146,7 +146,7 @@ export default {
     getFloorShow() {
         return async (dispatch) => {
             const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
-            console.log(4444444444, data)
+            //console.log(4444444444, data)
             dispatch(FloorShow(data));
         }
     }
