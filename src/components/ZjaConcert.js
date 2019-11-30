@@ -133,7 +133,7 @@ function mapStateToProps(state){
          getFloorShow(){
              dispatch(homeAction.getFloorShow.call(this))
         }
+      }      
 
-
-
+    }
 export default connect(mapStateToProps, mapDispatchToProps)(ZjaConcert)

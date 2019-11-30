@@ -120,20 +120,14 @@ export default {
             dispatch(upPerformanceDetail(data));
         }
     },
-<<<<<<< HEAD
-    //张建安  首页演唱会     https://api.juooo.com/home/index/getFloorShow?city_id=0&version=6.0.8&referer=2
-    getFloorShow() {
-        return async (dispatch) => {
-            const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
-=======
     // 演唱会
-    getFloorShow() {
-        return async (dispatch) => {
-            const { data } = await this.$axios.get("/m/home/index/getFloorShow?city_id=1&version=6.0.8&referer=2");
-            //console.log(4444444444,data)
-            dispatch(FloorShow(data));
-        }
-    },
+    // getFloorShow() {
+    //     return async (dispatch) => {
+    //         const { data } = await this.$axios.get("/m/home/index/getFloorShow?city_id=1&version=6.0.8&referer=2");
+    //         //console.log(4444444444,data)
+    //         dispatch(FloorShow(data));
+    //     }
+    // },
     //轮播图
     getCarouselList(){
         return async (dispatch) => {
@@ -170,8 +164,7 @@ export default {
     getFloorShow() {
         return async (dispatch) => {
             const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
-            console.log(4444444444, data)
->>>>>>> 7c8e8a955d08f298979fa6ec428fbaec91de461c
+            // console.log(4444444444, data)
             dispatch(FloorShow(data));
         }
     },
