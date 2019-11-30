@@ -40,7 +40,7 @@ class Feiremenyanchu extends React.Component {
                         overflowX:"auto"
                     }} >
                         {
-                            this.props.num.map(v => (
+                            this.props.getHostRecommendList.map(v => (
                                 <a key={v.pic} href="https://m.juooo.com/ticket/110304">
                                 <div  style={{marginLeft:"8px"}}>
                                     <div style={{
@@ -52,7 +52,7 @@ class Feiremenyanchu extends React.Component {
                                                             }}>
                                         <img src={v.pic} alt="" style={{width: "100%",height: "100%"}} />
                                     </div>
-                                    <h3 id="swiper-container-text" style={{fontSize: "16px",color:"#232323",fontWeight: "800",marginBottom:"3px"}}
+                                    <h3 id="swiper-container-text" style={{fontSize: "16px",color:"#232323",fontWeight: "800",marginBottom:"8px"}}
                                     /* ,由于溢出文字问题，将部分样式引导外部了style={{
                                         width: "107px",
                                         whiteSpace: "nowrap",
@@ -89,7 +89,7 @@ class Feiremenyanchu extends React.Component {
 
 function mapStateToProps(state){
     return {
-      num:state.home.num
+        getHostRecommendList:state.home.getHostRecommendList
     }
   }
   function mapDispatchToProps(dispatch){

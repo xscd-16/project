@@ -38,6 +38,9 @@
     ]
   },
   "devDependencies": {
-    "http-proxy-middleware": "^0.20.0"
+    "customize-cra": "^0.9.1",
+    "http-proxy-middleware": "^0.20.0",
+    "react-app-rewired": "^2.1.5"
   }
+  
 }

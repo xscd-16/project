@@ -20,7 +20,6 @@ class Home extends React.Component {
         <Nav></Nav>
         <Feiremenyanchu></Feiremenyanchu>
         <Feixunhuiyanchu></Feixunhuiyanchu>
-        
         <ZjaConcert></ZjaConcert>
         <Recommend></Recommend>
       </div>

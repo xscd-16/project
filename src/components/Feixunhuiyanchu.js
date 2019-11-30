@@ -13,9 +13,7 @@ class Feixunhuiyanchu extends React.Component {
     render() {
         return (
             <>
-                <div id="hotPerformance" style={{
-                    position:"relative"
-                }}>
+                <div id="hotPerformance" style={{position:"relative"}}>
                     <div className="hotPerformance_title" style={{marginBottom:"8px",marginTop:"8px"}}>
                         <h3 style={{
                             fontWeight: "800",
@@ -48,8 +46,8 @@ class Feixunhuiyanchu extends React.Component {
                                             
                                             <div  style={{marginLeft:"8px"}}>
                                                 <div style={{
-                                                                        width:"320px",
-                                                                        height: "190px",
+                                                                        width:"350px",
+                                                                        height: "200px",
                                                                         overflow:"hidden",
                                                                         borderRadius:"8px",
                                                                         marginBottom:"10px",
@@ -60,13 +58,13 @@ class Feixunhuiyanchu extends React.Component {
                                                                                             overflow: "hidden",
                                                                                             textOverflow:"ellipsis",
                                                                                             whiteSpace: "nowrap",
-                                                                                            width:"320px",
+                                                                                            width:"350px",
                                                                                             color:"#232323",
                                                                                             fontWeight:"800",
                                                                                             fontSize:"18px",
                                                                                             marginBottom:"10px"
                                                                                         }}>{v.show_name}</h2>
-                                                <p className="yanchucishu" style={{textAlign:"center",width:"350px",}}>{v.schedular_num+"场巡演"}</p>
+                                                <p className="yanchucishu" style={{textAlign:"center",width:"350px",marginBottom:"10px"}}>{v.schedular_num+"场巡演"}</p>
                                             </div>
                                             
                                             </a>
@@ -76,7 +74,7 @@ class Feixunhuiyanchu extends React.Component {
                     </div>
                     <div style={{
                         width: "100%",
-                        bottom: "0",
+                        bottom: "0PX",
                         height: "8px",
                         position: "absolute",
                         background:"#fff"
@@ -99,7 +97,7 @@ function mapStateToProps(state) {
         return {
             async tourRecommendList() {
                await dispatch(homeAction.tourRecommendList.call(this));
-                //console.log(888888888,this.props.getTourRecommendList);
+                console.log(888888888,this.props);
             }
         }
     }

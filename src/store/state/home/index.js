@@ -1,5 +1,5 @@
 export default{
-    num: [],//热门精选初始状态
+    getHostRecommendList: [],//热门精选初始状态
     getTourRecommendList:[],//这个是巡回演出初始状态
     num: [],
     // 为你推荐
@@ -31,6 +31,14 @@ export default{
     //演唱会
     floorShowList:[],
     floorShowContent:{},
+
+    //演出页面的  列表数据
+    YanChuContent:{
+        list:[]
+    },
+    YanChuNav:{
+        NavList:[]
+    },
     navList:[],
     carouselList:[]
 }
