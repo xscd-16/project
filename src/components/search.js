@@ -9,7 +9,7 @@ class Search extends React.Component {
         this.state = {
             value: "",
             isHot:true,
-            historyArr:[]||JSON.parse(localStorage.arr)
+            historyArr:JSON.parse(localStorage.arr)
         }
     }
     render() {
@@ -47,23 +47,39 @@ class Search extends React.Component {
                                         </div>
                                     ))}
                                 </div>
-                                </div>:this.props.showList.map(v=>(
+                                </div>:(this.props.type===1?this.props.showList.map(v=>(
                                     <div key={v.schedular_id} style={{marginBottom:"30px"}}>
                                     <div className={"show-search"}>
                                         <img src={v.pic} alt="" style={{width:"107px",height:"145px"}}/>
                                         <div style={{marginLeft:"15px"}}>
                                             <p style={{marginTop:"5px"}}><strong style={{fontWeight:"700",fontSize:"16px"}}>{v.end_show_time.slice(0,10)}</strong>&nbsp;<span>{v.show_time_bottom}</span>&nbsp;&nbsp;<span>{v.end_show_time.slice(-5)}</span></p>
-                                            <h3 className="show-h3" style={{fontSize:"16px",width:"223px",lineHeight:"23px", marginTop:"10px",color:"#232323",fontWeight:"700",minHeight:"23px",maxHeight:"47px"}}>{this.decode(v.name)}</h3>
+                                            <h3 className="show-h3" style={{fontSize:"16px",width:"223px",lineHeight:"23px", marginTop:"10px",color:"#232323",fontWeight:"700",minHeight:"23px",maxHeight:"47px"}} dangerouslySetInnerHTML={{__html:v.name}}></h3>
                                             <p style={{marginTop:"10px"}}><span>{v.city_name}|</span><span>{v.venue_name}</span></p>
                                             <p style={{marginTop:"7px"}}><span style={{color:"#ff6743",fontSize:"16px"}}>￥{v.min_price}</span> 起</p>
                                         </div>
                                     </div>
                                 </div>    
-                                ))
+                                )):null)
                                 
                                 }
-                                {this.state.isHot?null:<div style={{width:"100%",textAlign:"center"}}>没有更多了</div>}
-                       
+                                {this.state.isHot?null:(this.props.type===1?<div style={{width:"100%",textAlign:"center"}}>没有更多了</div>:<div style={{width:"100%",textAlign:"center",margin:"40px 0"}}><img style={{width:"90px",height:"65px"}} src={"https://m.juooo.com/static/img/empty_icon.d1aca0e.png"}/><br/><span>没有相关内容</span></div>)}
+                                {this.props.type===2&&!this.state.isHot?<h3 style={{fontSize:"20px"}}>为你推荐</h3>:null}
+                                {
+                                  this.props.type===2&&!this.state.isHot?  this.props.showList.map(v=>(
+                                        <div key={v.schedular_id} style={{marginBottom:"30px"}}>
+                                        <div className={"show-search"}>
+                                            <img src={v.pic} alt="" style={{width:"107px",height:"145px"}}/>
+                                            <div style={{marginLeft:"15px"}}>
+                                                <p style={{marginTop:"5px"}}><strong style={{fontWeight:"700",fontSize:"16px"}}>{v.end_show_time.slice(0,10)}</strong>&nbsp;<span>{v.show_time_bottom}</span>&nbsp;&nbsp;<span>{v.end_show_time.slice(-5)}</span></p>
+                                                <h3 className="show-h3" style={{fontSize:"16px",width:"223px",lineHeight:"23px", marginTop:"10px",color:"#232323",fontWeight:"700",minHeight:"23px",maxHeight:"47px"}} dangerouslySetInnerHTML={{__html:v.name}}></h3>
+                                                <p style={{marginTop:"10px"}}><span>{v.city_name}|</span><span>{v.venue_name}</span></p>
+                                                <p style={{marginTop:"7px"}}><span style={{color:"#ff6743",fontSize:"16px"}}>￥{v.min_price}</span> 起</p>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    )):null
+                                }
+                                {this.props.type===2&&!this.state.isHot?<div style={{width:"100%",textAlign:"center"}}>没有更多了</div>:null}
                     </section>
                 </div>
                 {console.log(this.props.hotList,555)}
@@ -94,6 +110,7 @@ class Search extends React.Component {
     decode(text){
         var div = document.createElement("div");
         div.innerHTML = text;
+        div.style.color="red";
         text = div.innerText || div.textContent;
         div = null;
         return text;
@@ -110,17 +127,19 @@ class Search extends React.Component {
         this.setState({
             value: e.target.value
         }, () => {
-            this.setState({
-                isHot:false
-            },()=>{
-               if(this.refs.word.value){
-                this.props.getShowList.call(this,this.refs.word.value)
-               }else{
-                   this.setState({
-                       isHot:true
-                   })
-               }
-            })
+            
+                if(this.refs.word.value){
+                 this.props.getShowList.call(this,this.refs.word.value)
+                 this.setState({
+                    isHot:false
+                })
+                }else{
+                    this.setState({
+                        isHot:true
+                    })
+                }
+             
+            
             
         })
 
@@ -144,7 +163,8 @@ class Search extends React.Component {
 function mapStateToProps(state) {
     return {
         hotList: state.search.arr,
-        showList:state.search.show
+        showList:state.search.show,
+        type:state.search.type
     }
 }
 

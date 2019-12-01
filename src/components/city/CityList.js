@@ -4,7 +4,6 @@ import ShortCity from "./ShortCity"
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import cityAction from "../../store/actionCreator/city/index";
-import scroller from "scroller"
 class CityList extends React.Component {
     
     render() {

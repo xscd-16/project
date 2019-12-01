@@ -6,7 +6,8 @@ export default (state = initState, {type, payload}) => {
         state.arr=payload
     }
     if(type===searchActionType.GET_SHOW){
-        state.show=payload
+        state.show=payload.list
+        state.type=payload.result_type
     }
     return state;
 }

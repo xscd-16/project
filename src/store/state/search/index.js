@@ -1,4 +1,5 @@
 export default {
     arr:[],
-    show:[]
+    show:[],
+    type:1
 }

@@ -100,15 +100,7 @@ class ZjaConcert extends React.Component {
                     </div>
                   </a>
 
-                  <a href={v.list[8].url}>
-                    <div className="Z_jczb_list">
-                      <img src={v.list[8].pic} />
-                      <h4>
-                        {v.list[8].schedular_name}
-                      </h4>
-                      <p>￥{v.list[8].low_price}<i>起</i></p>
-                    </div>
-                  </a>
+                  
                 </div>
               </div>
             </div>

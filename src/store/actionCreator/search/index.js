@@ -28,11 +28,13 @@ export default{
         return async (dispatch)=>{
             if(value){
                 const data=await this.$axios.get("/m/Show/Search/getShowList?keywords="+value+"&page=1&sort_type=1&version=6.0.8&referer=2")
+                dispatch(getSearch(data.data))
             }
             if(id){
                 const data=await this.$axios.get("/m/Show/Search/getShowList?venue_id="+id+"&page=1&sort_type=1&version=6.0.8&referer=2")
+                dispatch(getSearch(data.data.list))
             }
-            dispatch(getSearch(data.data.list))
+            
         }
     }
 }

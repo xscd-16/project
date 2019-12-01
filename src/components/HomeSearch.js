@@ -4,7 +4,7 @@ import navSearch from "../assets/img/nav_icon_search.png"
 import share from "../assets/img/share.png"
 import calendar from '../assets/img/calendar.png'
 import City from "../views/site/City"
-import {NavLink} from 'react-router-dom'
+import {NavLink,withRouter} from 'react-router-dom'
 class HomeSearch extends React.Component{
     constructor(){
         super()
@@ -76,7 +76,7 @@ class HomeSearch extends React.Component{
                             marginRight:"5px"
                         }}
                         />
-                        <span style={{
+                        <span onClick={()=>this.props.history.push("/search")} style={{
                             color:"#fff",
                             fontSize:"13px",
                         }}>搜索热门演出</span>
@@ -127,4 +127,4 @@ class HomeSearch extends React.Component{
         window.addEventListener('scroll', this.handleScroll.bind(this));
       }
 }
-export default HomeSearch
+export default withRouter(HomeSearch)
