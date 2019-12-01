@@ -16,7 +16,7 @@ class Search extends React.Component {
         console.log(this.state.isHot,this.props.showList)
         return (
             <div id="search">
-            <div className="search-header">
+            <div className="search-header" style={{touchAction: "none"}}>
                 <header className="head">
                     <div className="head-div">
                         <span className="iconfont icon-RectangleCopy1"></span>
@@ -116,10 +116,12 @@ class Search extends React.Component {
         return text;
     }
     clearHandler(){
-        this.setState({
-            value:"",
-            isHot:true
-        })
+        if(!this.state.isHot){
+            this.setState({
+                value:"",
+                isHot:true
+            })
+        }
         // this.refs.word.value=null;
         
     }

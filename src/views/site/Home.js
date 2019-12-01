@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import homeAction from "../../store/actionCreator/home/index";
 import CarouselList from "../../components/CarouselList";
 import Nav from "../../components/Nav";
+import Feiremenyanchu from "../../components/Feiremenyanchu"
+import Feixunhuiyanchu from "../../components/Feixunhuiyanchu"
 
 import HomeSearch from "../../components/HomeSearch"
 
@@ -16,7 +18,8 @@ class Home extends React.Component {
         <CarouselList >
         </CarouselList>
         <Nav></Nav>
-        
+        <Feiremenyanchu></Feiremenyanchu>
+        <Feixunhuiyanchu></Feixunhuiyanchu>
         <ZjaConcert></ZjaConcert>
         <Recommend></Recommend>
       </div>

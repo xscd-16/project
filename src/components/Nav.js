@@ -12,7 +12,7 @@ class Nav extends React.Component {
                         {
                             this.props.navList.map(v => (
                                 <li key={v.id}>
-                                    <a href={v.url}>
+                                    <a href="/showList">
                                         <img src={v.pic} alt="" />
                                         <p>{v.name}</p>
                                     </a>
