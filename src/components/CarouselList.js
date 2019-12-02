@@ -11,12 +11,17 @@ class CarouselList extends React.Component {
             <div id="carousel">
                 <div className="swiper-container" style={{
                      width:"100%",
+                     marginLeft:0,
                      height:"196px"
                 }}>
-                    <div className="swiper-wrapper">
+                    <div className="swiper-wrapper"  style={{
+                        width:"100%"
+                    }}>
                         {
                             this.props.carouselList.map(v => (
-                                <div className="swiper-slide" key={v.title}>
+                                <div className="swiper-slide" key={v.title} style={{
+                                    width:"100%"
+                                }}>
                                     <a href={v.url}>
                                         <img src={v.image_url} alt="" style={{ width: "100%",height:"196px",overflow:"hidden" }} />
                                     </a>

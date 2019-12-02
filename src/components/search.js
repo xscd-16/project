@@ -9,7 +9,7 @@ class Search extends React.Component {
         this.state = {
             value: "",
             isHot:true,
-            historyArr:JSON.parse(localStorage.arr)
+            historyArr:[]
         }
     }
     render() {
