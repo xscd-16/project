@@ -113,19 +113,19 @@ class ZjaConcert extends React.Component {
     this.props.getFloorShow.call(this)
   }
 }
-function mapStateToProps(state) {
-  //console.log(state)
-  return {
-    floorShowList: state.home.floorShowList,
-    floorShowContent: state.home.floorShowContent
-  }
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    getFloorShow() {
-      dispatch(homeAction.getFloorShow.call(this))
+function mapStateToProps(state){
+  // console.log(state.home.floorShowContent)
+    return {
+      floorShowList:state.home.floorShowList,
+      floorShowContent:state.home.floorShowContent
     }
-
   }
-}
+  function mapDispatchToProps(dispatch){
+    return {
+         getFloorShow(){
+             dispatch(homeAction.getFloorShow.call(this))
+        }
+      }      
+
+    }
 export default connect(mapStateToProps, mapDispatchToProps)(ZjaConcert)
