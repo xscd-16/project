@@ -1,6 +1,7 @@
 export default{
     getHostRecommendList: [],//热门精选初始状态
     getTourRecommendList:[],//这个是巡回演出初始状态
+    getMoreXunHuiYanChuList:[],//这个是巡回演出跳转加载更多初始状态
     num: [],
     // 为你推荐
     recommendList: [],

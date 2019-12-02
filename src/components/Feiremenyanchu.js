@@ -1,11 +1,6 @@
 //这里是热门演出组件模块
-
-
-
-
-
 import React from "react"
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import homeAction from "../store/actionCreator/home/index";
 import "../assets/css/feiremenyanchu.css"
@@ -14,45 +9,45 @@ class Feiremenyanchu extends React.Component {
         return (
             <>
                 <div id="hotPerformance" style={{
-                    position:"relative"
+                    position: "relative"
                 }}>
-                    <div className="hotPerformance_title" style={{marginBottom:"8px",marginTop:"8px"}}>
+                    <div className="hotPerformance_title" style={{ marginBottom: "8px", marginTop: "8px" }}>
                         <h3 style={{
                             fontWeight: "800",
-                            fontSize: "24px",
+                            fontSize: "19px",
                             marginTop: "25px",
-                            paddingLeft:"10px",
-                            color:"#232323"
-                            }}>热门演出
+                            paddingLeft: "10px",
+                            color: "#232323"
+                        }}>热门演出
                             <a href="https://m.juooo.com/show/showsLibrary">
                                 <i style={{
                                     color: "#232323",
                                     fontSize: "19px",
                                     float: "right",
-                                    paddingRight:"10px",
-                                    fontWeight:"300"
+                                    paddingRight: "10px",
+                                    fontWeight: "300"
                                 }}>></i>
                             </a>
                         </h3>
                     </div>
                     <div className="hotPerformance_content" style={{
                         display: "flex",
-                        overflowX:"auto"
+                        overflowX: "auto"
                     }} >
                         {
                             this.props.getHostRecommendList.map(v => (
                                 <a key={v.pic} href="https://m.juooo.com/ticket/110304">
-                                <div  style={{marginLeft:"8px"}}>
-                                    <div style={{
-                                                            width:"140px",
-                                                            height: "180px",
-                                                            overflow:"hidden",
-                                                            borderRadius:"8px",
-                                                            marginBottom:"5px",
-                                                            }}>
-                                        <img src={v.pic} alt="" style={{width: "100%",height: "100%"}} />
-                                    </div>
-                                    <h3 id="swiper-container-text" style={{fontSize: "16px",color:"#232323",fontWeight: "800",marginBottom:"8px"}}
+                                    <div style={{ marginLeft: "8px" }}>
+                                        <div style={{
+                                            width: "107px",
+                                            height: "146px",
+                                            overflow: "hidden",
+                                            borderRadius: "8px",
+                                            marginBottom: "5px",
+                                        }}>
+                                            <img src={v.pic} alt="" style={{ width: "100%", height: "100%" }} />
+                                        </div>
+                                        <h3 id="swiper-container-text" style={{ fontSize: "16px", color: "#232323", fontWeight: "800", marginBottom: "8px" }}
                                     /* ,由于溢出文字问题，将部分样式引导外部了style={{
                                         width: "107px",
                                         whiteSpace: "nowrap",
@@ -66,7 +61,7 @@ class Feiremenyanchu extends React.Component {
                                         WebkitLineClamp: "2",
                                         overflow: "hidden",
                                     }} */>{v.show_name}</h3>
-                                </div>
+                                    </div>
                                 </a>
                             ))
                         }
@@ -76,7 +71,7 @@ class Feiremenyanchu extends React.Component {
                         bottom: "0",
                         height: "8px",
                         position: "absolute",
-                        background:"#fff"
+                        background: "#fff"
                     }}></div>
                 </div>
             </>
@@ -87,19 +82,19 @@ class Feiremenyanchu extends React.Component {
     }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return {
-        getHostRecommendList:state.home.getHostRecommendList
+        getHostRecommendList: state.home.getHostRecommendList
     }
-  }
-  function mapDispatchToProps(dispatch){
+}
+function mapDispatchToProps(dispatch) {
     return {
-        getList(){
+        getList() {
             dispatch(homeAction.getList.call(this))
-            
+
         }
     }
-  }
+}
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Feiremenyanchu))
 
 // 下面是最初自己写的，有小问题没解决，后来改用上面的代码
@@ -153,7 +148,7 @@ function mapStateToProps(state){
     return {
         getList(){
             dispatch(homeAction.getList.call(this))
-            
+
         }
     }
   }

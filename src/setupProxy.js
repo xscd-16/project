@@ -14,4 +14,11 @@ module.exports  = function (app) {
             "^/p":""
         }
     }))
+    app.use("/l",proxy({
+        target:"https://m.juooo.com",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/l":""
+        }
+    }))
 }

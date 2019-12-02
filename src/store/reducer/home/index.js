@@ -5,8 +5,13 @@ export default (state = initState, {type, payload}) => {
     if (type === homeActionType.UPREMENJINGXUAN) {
         state.num = payload.data.hots_show_list;
     }else if(type===homeActionType.UPGETTOURRECOMMENDLIST){
+        //这里是巡回演出组件
         state.getTourRecommendList = payload.data.tour_show_list
-        console.log(1213131)
+        //console.log(1213131,payload.data)
+    }else if(type===homeActionType.UPGETMOREXUNHUIYANCHULIST){
+        //这里是巡回演出页面级跳转页面加载更多列表
+        state.getMoreXunHuiYanChuList = payload.data
+        //console.log(676767676,payload.data)
     }else if(type === homeActionType.GET){
         state.getHostRecommendList = payload.data.hots_show_list;
     }else if (type === homeActionType.UPRECOMMENDLIST) {

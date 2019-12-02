@@ -15,6 +15,13 @@ export const upGetTourRecommendList = data => {
         payload: data
     }
 }
+//巡回演出跳转加载列表
+export const upGetMoreXunHuiYanChuList = data => {
+    return {
+        type: homeActionType.UPGETMOREXUNHUIYANCHULIST,
+        payload: data
+    }
+}
 
 
 
@@ -102,6 +109,15 @@ export default {
             const data = await this.$axios.get("/m/home/index/getTourRecommendList?city_id=0&version=6.0.8&referer=2");
              //console.log("巡回演出返回数据",data);
             dispatch(upGetTourRecommendList(data));
+        }
+    },
+ //https://m.juooo.com/tour/ShowList
+    //巡回演出跳转加载列表
+    moreXunHuiYanChuList() {
+        return async (dispatch) => {
+            const data = await this.$axios.get("/l/tour/ShowList");
+            //console.log("kkkkk",data)
+            dispatch(upGetMoreXunHuiYanChuList(data));
         }
     },
 
