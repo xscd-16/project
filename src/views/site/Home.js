@@ -4,10 +4,9 @@ import { connect } from "react-redux";
 import homeAction from "../../store/actionCreator/home/index";
 import CarouselList from "../../components/CarouselList";
 import Nav from "../../components/Nav";
-
 import HomeSearch from "../../components/HomeSearch"
-
 import ZjaConcert from "../../components/ZjaConcert";
+import {withRouter} from "react-router-dom"
 class Home extends React.Component {
   render() {
     return (
@@ -16,7 +15,6 @@ class Home extends React.Component {
         <CarouselList >
         </CarouselList>
         <Nav></Nav>
-        
         <ZjaConcert></ZjaConcert>
         <Recommend></Recommend>
       </div>
@@ -24,8 +22,8 @@ class Home extends React.Component {
   }
   
   componentDidMount() {
+    //console.log(this.props)
     this.props.getList.call(this)
-    window.addEventListener('scroll', this.handleScroll);
   }
 }
 function mapStateToProps(state) {
@@ -40,4 +38,4 @@ function mapDispatchToProps(dispatch) {
     }
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home));

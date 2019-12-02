@@ -50,6 +50,7 @@ export const carouselList = data => {
         payload:data.data
     }
 }
+//nav
 export const navList = data => {
     return{
         type:homeActionType.GET_NAV_LIST,
@@ -93,7 +94,7 @@ export default {
     //轮播图
     getCarouselList(){
         return async (dispatch) => {
-            const data = await this.$axios.get("/m/home/index/getClassifyHome")
+            const data = await this.$axios.get("/m/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.0.8&referer=2")
             //console.log(54656655,data)
             dispatch(carouselList(data))
             new Swiper ('.swiper-container', {
@@ -122,12 +123,5 @@ export default {
             dispatch(upAboutRecommend(data.data.list));
         }
     },
-    // 演唱会     https://api.juooo.com/home/index/getFloorShow?city_id=0&version=6.0.8&referer=2
-    getFloorShow() {
-        return async (dispatch) => {
-            const { data } = await this.$axios.get("/m/home/index/getFloorShow?");
-            console.log(4444444444, data)
-            dispatch(FloorShow(data));
-        }
-    }
+  
 }

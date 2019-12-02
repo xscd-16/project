@@ -4,9 +4,7 @@ import ShortCity from "./ShortCity"
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import cityAction from "../../store/actionCreator/city/index";
-import scroller from "scroller"
 class CityList extends React.Component {
-    
     render() {
         return (
             <div id="city">
@@ -22,14 +20,13 @@ class CityList extends React.Component {
                         {
                             this.props.hotCityList.map(v=>(
                                 <Fragment key={v.id}>
-                                <div className="hot_city_name">{v.name}</div>
+                                <div className="hot_city_name" onClick={()=>this.props.history.push({pathname:"/",state:{name:v.name}})}>{v.name}</div>
                                 </Fragment>
                             ))
                         }   
                         </div>
                     </div>
                     <ShortCity></ShortCity>
-                 
                 </div>
                 
             <div className="city_list_index">
@@ -51,7 +48,7 @@ class CityList extends React.Component {
     }
     componentDidMount() {
         this.props.getHotCity.call(this)
-        
+        //console.log(this.props)
     }
     scrollToAnchor = (e) => {
         if (e) {   // 找到锚点 id
