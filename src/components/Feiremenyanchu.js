@@ -19,7 +19,7 @@ class Feiremenyanchu extends React.Component {
                     <div className="hotPerformance_title" style={{marginBottom:"8px",marginTop:"8px"}}>
                         <h3 style={{
                             fontWeight: "800",
-                            fontSize: "24px",
+                            fontSize: "19px",
                             marginTop: "25px",
                             paddingLeft:"10px",
                             color:"#232323"
