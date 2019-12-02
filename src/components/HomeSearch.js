@@ -3,14 +3,15 @@ import "../assets/position-iconfont/zsiconfont.css"
 import navSearch from "../assets/img/nav_icon_search.png"
 import share from "../assets/img/share.png"
 import calendar from '../assets/img/calendar.png'
-import City from "../views/site/City"
-import {NavLink} from 'react-router-dom'
+
+import {NavLink,withRouter} from 'react-router-dom'
 class HomeSearch extends React.Component{
     constructor(){
         super()
         this.state = {
             bg:"transparent",
-            position_color:"#fff"
+            position_color:"#fff",
+            location:"全国"
         }
     }
     render(){
@@ -32,7 +33,7 @@ class HomeSearch extends React.Component{
                     backgroundColor:this.state.bg,
                     borderBottom:"0"
                 }}>
-                <NavLink to={"/city"}>
+                
                     <div className="home_content" style={{
                         width:"60px",
                         height:"30px",
@@ -48,14 +49,14 @@ class HomeSearch extends React.Component{
                             height:"13px",
                             textAlign:"center",  
                         }}></strong>
-                       
+                        <NavLink to={"/city"}>
                         <span style={{
                             fontSize:"15px",
                             color:"#fff"
-                        }}>全国</span>
-                        
+                        }}>{this.state.location}</span>
+                        </NavLink>
                     </div>
-                    </NavLink>
+                    
                     <div className="home_search" style={{
                         width:"214px",
                         height:"30px",
@@ -76,7 +77,7 @@ class HomeSearch extends React.Component{
                             marginRight:"5px"
                         }}
                         />
-                        <span style={{
+                        <span onClick={()=>this.props.history.push("/search")} style={{
                             color:"#fff",
                             fontSize:"13px",
                         }}>搜索热门演出</span>
@@ -124,7 +125,19 @@ class HomeSearch extends React.Component{
         }
       }
       componentDidMount() {  
+          //console.log(this.props)
+          if(this.props.location.state){
+            this.setState({
+                location:this.props.location.state.name
+            })
+          }
         window.addEventListener('scroll', this.handleScroll.bind(this));
       }
+      componentWillUnmount(){
+        this.setState = (state, callback) => {
+            return;
+          };
+        
+      }
 }
-export default HomeSearch
+export default withRouter(HomeSearch)

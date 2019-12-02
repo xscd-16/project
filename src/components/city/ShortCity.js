@@ -16,7 +16,9 @@ class ShortCity extends React.Component{
                         <div className="city_list_name">
                         {
                             v.list.map(item=>(
-                                <div className="city_list_name_item"key={item.id} >{item.name}</div>
+                                <div className="city_list_name_item"key={item.id} 
+                                onClick={()=>this.props.history.push({pathname:"/",state:{name:item.name}})}
+                                >{item.name}</div>
                             ))
                         }  
                         </div>

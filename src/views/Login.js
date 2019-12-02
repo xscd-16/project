@@ -12,11 +12,13 @@ class Login extends React.Component {
     }
     render() {
         return (
+            <div id="logo">
             <div className="header">
-                <h1 className="logo-h1">欢迎来到聚橙网</h1>
-                <input className="height" ref={"phone"} type="text" placeholder={"请输入手机号"} />
-                <div className="div"><input className="input" ref="it" placeholder={"请输入验证码"} type="text" /><input type="button" ref="bt" onClick={this.getCheck.bind(this)} defaultValue={this.state.checkNum} className="span" /></div>
-                <div className="div1" onClick={this.logoIn.bind(this)}>登录</div>
+            <h1 className="logo-h1">欢迎来到聚橙网</h1>
+            <input className="height" ref={"phone"} type="text" placeholder={"请输入手机号"} />
+            <div className="div"><input className="input" ref="it" placeholder={"请输入验证码"} type="text" /><input type="button" ref="bt" onClick={this.getCheck.bind(this)} defaultValue={this.state.checkNum} className="span" /></div>
+            <div className="div1" onClick={this.logoIn.bind(this)}>登录</div>
+        </div>
             </div>
         )
     }
