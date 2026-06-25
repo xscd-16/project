@@ -6,6 +6,8 @@ import Site from "./views/Site";
 import PerformanceDetail from "./views/PerformanceDetail";
 function App(props) {
   console.log('App console line 1');
+
+  console.log('App console line 1');
   console.log('App console line 2');
   console.log('App console line 3');
   console.log('App console line 4');
