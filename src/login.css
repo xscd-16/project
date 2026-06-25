@@ -1,0 +1,31 @@
+.header{
+    padding:40px;
+}
+h1{
+    margin-bottom: 40px;
+}
+.height{
+    display: block;
+    height:40px;
+    width:100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+.input{
+    height:40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.span{
+    display: block;
+    height: 34px;
+    border:1px solid gray;
+    padding: 2px;
+    border-radius: 20%;
+    line-height: 34px;
+}
+.div{
+    display: flex;
+}
